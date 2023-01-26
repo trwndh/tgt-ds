@@ -154,7 +154,7 @@
 		if($kategori=='situp'){$kat = 7;}
 
 		$creator = $_SESSION['nama_lengkap'];
-		$q = "INSERT INTO ytds_nilai VALUES('','$id','$usia', '$kat','$val','$nilai','$creator',now())";
+		$q = "INSERT INTO ytds_nilai(id_member, usia_saat_test, kategori_penilaian,val,nilai,dibuat_oleh,tanggal_penilaian) VALUES('$id','$usia', '$kat','$val','$nilai','$creator',now())";
 		$exec = $conn->query($q);
 		if ($exec) {
 			echo "Done!";
